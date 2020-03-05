@@ -82,7 +82,6 @@ nav {
 
 .menu-container {
   position: relative;
-  margin: 0 auto;
   margin-top: -5px;
   max-width: 980px;
   padding: 0 22px;
@@ -195,4 +194,9 @@ nav {
 .search-sub-menu ul li a:first-child {
   float: none;
   padding-right: 0;
+}
+
+.menu-support{
+ padding-left:;
+
 }
