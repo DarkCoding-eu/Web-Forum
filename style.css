@@ -53,7 +53,8 @@ body{margin:0;font-family:Arial;}
 .btn a,
 #itm3 a,
 #itm2 a,
-#itm1 a{
+#itm1 a,
+#itm0 a{
   color: inherit;
   text-decoration: none;
 }
@@ -114,6 +115,7 @@ font-family:arial;
 background-color:#424242;
 float:left;
 width:10%;
+height:100%;
 height:6798px;
 
 }
@@ -135,7 +137,21 @@ background:#D8D8D8;
   color:#424242;
   background-color:#1C1C1C;
 }
+.sidebarfixed1 a{
+  color: inherit;
+  text-decoration: none;
+}
 .sidebarfixed a{
   color: inherit;
   text-decoration: none;
+}
+.sidebarfixed1:hover{
+  color:white;
+}
+.texte{
+  text-align: center;
+  font-family:Arial;
+}
+p::first-letter {
+  font-size: x-large;
 }
