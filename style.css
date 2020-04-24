@@ -75,10 +75,10 @@ body{margin:0;font-family:Arial;}
 
 .boxen{
 border-width: 1px;
-border-color: 696969;
+border-color: #B40404;
 border-style:solid;
 width:1100px;
-height:500px;
+height:400px;
 margin:0 auto;
 background-color:#FAFAFA;
 font-family:arial;
@@ -116,7 +116,7 @@ background-color:#424242;
 float:left;
 width:10%;
 height:100%;
-height:6798px;
+height:4643px;
 
 }
 .sidebarfixed{
@@ -134,8 +134,8 @@ background:#D8D8D8;
   text-align:center;
   position:fixed;
   width:10%;
-  color:#424242;
-  background-color:#1C1C1C;
+  color:black;
+  background-color:#B40404;
 }
 .sidebarfixed1 a{
   color: inherit;
@@ -154,4 +154,5 @@ background:#D8D8D8;
 }
 p::first-letter {
   font-size: 30px;
+  color:#B40404;
 }
