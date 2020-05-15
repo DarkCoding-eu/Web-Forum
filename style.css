@@ -55,7 +55,8 @@ body{margin:0;font-family:Arial;}
 #itm2 a,
 #itm1 a,
 #itm0 a,
-#sidebar a{
+#sidebar a,
+#sidebar-index a{
   color: inherit;
   text-decoration: none;
 }
@@ -118,7 +119,15 @@ font-family:arial;
   background-color:#D8D8D8;
   width:90%;
   float:right;
+  height:3890px;
+  font-family:arial;
 
+}
+.bilder{
+  background-color:#D8D8D8;
+  
+  width:90%;
+  height:400px;
 }
 
 .sidebar{
@@ -145,6 +154,13 @@ background:#D8D8D8;
   width:10%;
   color:#424242;
   background:#D8D8D8;
+}
+#sidebar-index{
+  text-align:center;
+  position:fixed;
+  width:10%;
+  color:#D8D8D8;
+  background:#B40404;
 }
 .sidebarfixed1{
   text-align:center;
