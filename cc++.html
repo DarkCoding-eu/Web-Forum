@@ -29,8 +29,63 @@
   </div>
 </div>
 
-
-
+<div class="inhalt">
+  <div class="boxen2">
+    <p><h1 style="color:#B40404;">C</h1><h3>Geschichte</h3>
+      <h4>Entstehung</h4>
+      C wurde 1969–1973 von Dennis Ritchie in den Bell Laboratories für die Programmierung des damals neuen Unix-Betriebssystems entwickelt. Er stützte sich dabei auf die Programmiersprache B, die Ken Thompson und Dennis Ritchie in den Jahren 1969/70 geschrieben hatten – der Name C entstand als Weiterentwicklung von B. B wiederum geht auf die von Martin Richards Mitte der 1960er-Jahre entwickelte Programmiersprache BCPL zurück. Ritchie schrieb auch den ersten Compiler für C. 1973 war die Sprache so weit ausgereift, dass man nun den Unix-Kernel für die PDP-11 neu in C schreiben konnte.<br>
+      <h4>Weitere Entwicklung</h4>
+      K&R C erweiterte die Sprache um neue Schlüsselwörter wie long oder unsigned und führte die von Mike Lesk entwickelte I/O-Standardbibliothek und auf Empfehlung von Alan Snyder den Präprozessor ein.
+    </p>
+  </div>
+  <div class="boxen2">
+    <p><h1 style="color:#B40404;">C++</h1><h3>Einsatzgebiete</h3>
+    C++ wird sowohl in der Systemprogrammierung als auch in der Anwendungsprogrammierung eingesetzt und gehört in beiden Bereichen zu den verbreitetsten Programmiersprachen.
+    <h4>Systemprogrammierung</h4>
+    Typische Anwendungsfelder in der Systemprogrammierung sind Betriebssysteme, eingebettete Systeme, virtuelle Maschinen, Treiber und Signalprozessoren. C++ nimmt hier oft den Platz ein, der früher ausschließlich Assemblersprachen und der Programmiersprache C vorbehalten war.<br>
+    <h4>Anwendungsprogrammierung</h4>
+    Bei der Anwendungsprogrammierung kommt C++ vor allem dort zum Einsatz, wo hohe Anforderungen an die Effizienz gestellt werden, um durch technische Rahmenbedingungen vorgegebene Leistungsgrenzen möglichst gut auszunutzen. Ab dem Jahr 2000 wurde C++ aus der Domäne der Anwendungsprogrammierung von den Sprachen Java und C# zurückgedrängt.<br>
+    <h3>Eigenschaften</h3>
+    <h4>Sprachdesign</h4>
+    Die Sprache C++ verwendet nur etwa 60 Schlüsselwörter („Sprachkern“), manche werden in verschiedenen Kontexten (static, default) mehrfach verwendet. Ihre eigentliche Funktionalität erhält sie, ähnlich wie auch die Sprache C, durch die C++-Standardbibliothek, die der Sprache fehlende wichtige Funktionalitäten beibringt (Arrays, Vektoren, Listen, ...) wie auch die Verbindung zum Betriebssystem herstellt (iostream, fopen, exit, ...). Je nach Einsatzgebiet kommen weitere Bibliotheken und Frameworks dazu. C++ legt einen Schwerpunkt auf die Sprachmittel zur Entwicklung von Bibliotheken. Dadurch favorisiert es verallgemeinerte Mechanismen für typische Problemstellungen und besitzt kaum in die Sprache integrierte Einzellösungen.<br>
+    Eine der Stärken von C++ ist die Kombinierbarkeit von effizienter, maschinennaher Programmierung mit mächtigen Sprachmitteln, die einfache bis komplexe Implementierungsdetails zusammenfassen und weitgehend hinter abstrakten Befehlsfolgen verbergen. Dabei kommt vor allem die Template-Metaprogrammierung zum Zuge: Eine Technik, die eine nahezu kompromisslose Verbindung von Effizienz und Abstraktion erlaubt.<br>
+    Einige Design-Entscheidungen werden allerdings auch häufig kritisiert:<br>
+    <h4>Ressourcenverwaltung</h4>
+    C++ hat keine Garbage Collection, allerdings gibt es Bestrebungen, Garbage-Collection durch Bibliotheken oder durch Aufnahme in den Sprachstandard zu ermöglichen. Siehe auch Boehm-Speicherbereinigung.<br>
+    Es ist jedoch möglich, Speicher im Programm zu verwalten; zur Implementierung von Low-Level-Bibliotheken wie der C++-Standardbibliothek ist es notwendig. In High-Level-Code wird hiervon jedoch dringend abgeraten.<br>
+    Stattdessen ist dort es üblich, die Speicherverwaltung von der C++-Standardbibliothek übernehmen zulassen, indem man die angebotenen Containerklassen verwendet. Andere Ressourcen, z. B. Dateihandles oder Netzwerksockets werden in C++ üblicherweise in eigenen Klassen mit dem Prinzip RAII verwaltet, um das automatische Aufräumen nach der Verwendung sicherzustellen.<br>
+    Wenn man selbst in Objekten auf andere Objekte verweist, arbeitet man, als Alternative zu einem Garbage Collector, üblicherweise mit Smart Pointern, die die Ressourcenverwaltung dann übernehmen. Die Standardbibliothek verwendet hier intern meist Reference counting.<br>
+    <h4>Unvollständige Objektorientierung</h4>
+    <h4>Sichtbarkeit privater Elemente</h4>
+    In C++ gehören private Eigenschaften (Variablen und Methoden) normalerweise mit zur Schnittstelle, die in der Header-Datei veröffentlicht ist. Dadurch entstehen zur Compilezeit und zur Laufzeit Abhängigkeiten der Objekte zu den Stellen, die sie verwenden.<br>
+    Diese Abhängigkeiten können durch bestimmte Konstruktionen, wie dem pimpl-Idiom (pointer to implementation idiom), vermieden werden. Dabei werden die privaten Felder der Klasse (example_class) in eine private, vorwärts-deklarierte Hilfsklasse verschoben, und ein Zeiger auf ein Objekt dieser Hilfsklasse (example_class::impl * impl_ptr) bleibt in der eigentlichen Klasse. Die Definition der implementierenden Klasse findet bei der Implementierung der öffentlichen Klasse statt und ist damit für den Verwender der Klasse (der nur die Header-Datei kennt) unsichtbar. Dadurch, dass die Hilfsklasse nur durch einen Zeiger referenziert wird, bleiben alle Quelltextänderungen an privaten Feldern transparent und die Binärkompatibilität wird erhalten.<br>
+    <h4>Unvollständige Kapselung</h4>
+    In C++ sind die Speicherbereiche der einzelnen Objekte zur Laufzeit nicht vor (absichtlichen oder versehentlichen) gegenseitigen Änderungen geschützt.<br>
+    <h4>Undefiniertes Verhalten</h4>
+    Das Verhalten von vielen Sprachkonstrukten ist nicht definiert. Dies bedeutet, dass der Standard weder vorgibt noch empfiehlt, was in einem solchen Fall passiert. Die Auswirkungen reichen von Implementierungsabhängigkeit (d. h. je nach Zielrechner und Compiler kann sich das Konstrukt unterschiedlich verhalten) über unsinnige Ergebnisse oder Programmabstürze bis hin zu gefährlichen Sicherheitslücken. Einige dieser Freiheiten des Compilers lassen zusätzliche Optimierungen des Codes zu, einige haben allerdings keinen praktischen Nutzen und sind unnötigerweise undefiniert. Eine dritte Gruppe stellt Code dar, den man ohne Performanceverluste als Code mit definiertem Verhalten schreiben kann.<br>
+    Durch undefiniertes Verhalten kommt es zu unterschiedlichem Verhalten bei<br>
+    verschiedenen Compilern<br>
+    verschiedenen Compiler-Versionen<br>
+    ausgewählte Architektur (ARM, x86, x64)<br>
+    verschiedenen Optimierungseinstellungen (Debug, Release, Optimierung)<br>
+    ausgewählter Befehlssatz, Aufrufkonventionen, u. v. a. m.<br>
+    bei mehrfädigen Programmen spielt der zeitliche Ablauf eine weitere Rolle.<br>
+    Quellcode mit Codepassagen mit undefiniertem Verhalten kann nach der Kompilierung unerwartetes und absurd erscheinenden Verhalten zeigen. So werden zu spät durchgeführte Überprüfungen wegoptimiert oder Schleifen, die auf einen ungültigen Index eines Arrays zugreifen, durch leere Endlosschleifen ersetzt.<br>
+    Wichtig für das Verständnis von undefiniertem Verhalten ist insbesondere, dass niemals nur eine einzelne Operation ungültig ist, sondern das gesamte Programm ungültig wird und kein wohlgeformtes C++ mehr darstellt. Der Grund ist, dass manche Arten von „undefiniertem Verhalten“ Auswirkungen auf ganz andere, auch in sich korrekte, Programmteile haben und deren Verhalten beeinflussen können, beispielsweise bei Pufferüberläufen oder der unbeabsichtigten Änderung von Prozessor-Flags, die durch eine ungültige arithmetische Operation verursacht wurde und die nachfolgenden Berechnungen beeinflussen kann.<br>
+    Beispiele für undefiniertes Verhalten:<br>
+    Überlauf von vorzeichenbehafteten Ganzzahlen (auch z. B. bei Umwandlung von unsigned int nach int)<br>
+    Nullzeiger-Dereferenzierungen<br>
+    Arrayzugriffe mit ungültigem Index<br>
+    Schiebeoperationen mit einer Schiebeweite, die negativ oder größergleich der Zahl der Bits des zu schiebenden Typs ist<br>
+    Division durch null mit integralen Datentypen<br>
+    Weglassen des return-Statements in Funktionen mit Rückgabewert (die Hauptfunktion main bildet die einzige Ausnahme)<br>
+    Ein Nebeneffekt ändert eine Variable, die mehrmals in dem Ausdruck (v[i] = i++;) oder in der Argumentliste (f(i, i++);) vorkommt (die Auswertungsreihenfolge von Teilausdrücken und Funktionsargumenten ist nicht festgelegt)<br>
+    Einerseits ist das hieraus resultierende nichtdeterministische Laufzeitverhalten, insbesondere bei kleinen Änderungen der Plattform, mindestens als Risiko, in der Praxis oft aber als klarer Nachteil einzustufen. Andererseits werden hierdurch schnellere Programme ermöglicht, da Gültigkeitsüberprüfungen weggelassen werden können und der Compiler zudem oft Programmteile stärker optimieren kann, indem er Randfälle als per Definition ausgeschlossen ignoriert.<br>
+    Ein oft nicht wahrgenommener Vorteil ist darüber hinaus, dass dadurch, dass undefiniertes Verhalten praktisch nur in äußerst fragwürdigen Konstrukten auftritt, die aber nicht zwingend während des Kompilierens feststellbar sind, unsemantischer oder anderweitig suboptimaler Code gewissermaßen verboten wird.<br>
+    Beispielsweise besteht eine illegale Art zu prüfen, ob die Summe zweier positiver Ganzzahlen {\displaystyle a}a und {\displaystyle b}b vom Typ ‚int‘ verlustfrei wieder in einem ‚int‘ abgebildet werden kann, daraus, zu schauen, ob ihre Summe größer 0 ist (bei Überlauf entsteht auf den meisten Computern durch die Zweierkomplement-Arithmetik eine negative Zahl). Eine derartige Überprüfung ist allerdings aus mathematischer Sicht nicht besonders sinnvoll. Eine bessere (semantischere) Herangehensweise ist hier, die eigentliche Frage, ob {\displaystyle a+b\leq \mathrm {INT\_MAX} }a+b\leq \mathrm {INT\_MAX} , wobei {\displaystyle \mathrm {INT\_MAX} }\mathrm {INT\_MAX}  die größte in einem ‚int‘ darstellbare Zahl ist, nach der mathematisch validen Umformung zu {\displaystyle a\leq \mathrm {INT\_MAX} -b}a\leq \mathrm {INT\_MAX} -b zu verwenden.
+    </p>
+  </div>
+</div>
 
 </body>
 </html>
