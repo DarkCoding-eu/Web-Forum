@@ -7,16 +7,12 @@ body {
   background-color: #D8D8D8;
 }
 
-
-
 .btn a,
 .sidebar-content a,
-.sidebar-header a
-{
+.sidebar-header a{
   color: inherit;
   text-decoration: none;
 }
-
 
 .boxen{
 border-width: 1px;
@@ -53,8 +49,6 @@ padding:10px;
   text-align:left;
 }
 
-
-
 .btn{
   color:black;
   font-family: Arial;
@@ -80,16 +74,13 @@ padding:10px;
   flex-direction:column;
 
 }
-.bilder{
-  margin-left:0 auto;
-  margin-right:0 auto;
-}
 
 .texte{
   text-align: left;
   font-family:Arial;
   padding:10px;
 }
+
 p::first-letter {
   font-size: 30px;
   color:#B40404;
@@ -123,6 +114,7 @@ p::first-letter {
 .sidebar-header:hover{
   color:white;
 }
+
 .sidebar-content:hover{
   color:#b40404;
 }
